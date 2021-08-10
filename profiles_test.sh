@@ -2,4 +2,4 @@
 
 
 
-echo | jq '.matthew.wife' profiles.json
+echo | jq '.[] | .wife' profiles.json
