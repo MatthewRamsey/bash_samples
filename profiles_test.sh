@@ -3,7 +3,10 @@
 # echo | jq '.[] | .wife' profiles.json
 
 # profile_overview () { args: string name
-    echo | jq '.[] | .'$1 profiles.json
+for var in "$@"
+do
+    echo | jq '.[] | .'$var profiles.json
+done
 # }
 
 # profile_overview
